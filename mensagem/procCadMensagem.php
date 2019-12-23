@@ -3,18 +3,27 @@
     include_once '../conexao/db_conexao.php';
     
     if(isset($_POST['btnCadastrar'])){
-    $origemlead = mysqli_real_escape_string($conn, $_POST['origemlead']);
+    $modelo = mysqli_real_escape_string($conn, $_POST['modelo']);
+    $descricao = mysqli_real_escape_string($conn, $_POST['descricao']);
 
-    $result_origemlead= "insert into origemlead(origemlead) values ('$origemlead')";
+    if(isset($_FILES['upload'])){
+        $upload = $_FILES['upload']['name'];
+        $diretorio = "./upload/";
+        move_uploaded_file($_FILES['upload']['tmp_name'], $diretorio.$upload);
+    }
 
-    if(mysqli_query($conn, $result_origemlead)){
+    $sequencia = mysqli_real_escape_string($conn, $_POST['sequencia']);
+
+    $result_mensagem= "insert into mensagem(modelo, descricao, upload, sequencia) values ('$modelo', '$descricao', '$upload', '$sequencia')";
+
+    if(mysqli_query($conn, $result_mensagem)){
         $_SESSION['msg'] = "<div class='alert alert-success alert-dismissible fade show col-md-s6 text-center' role='alert'> Cadastrado com sucesso
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div> ";
-        header("Location: visOrigemLead.php");
+        header("Location: visMensagem.php");
     } else {
         $_SESSION['msg'] = "<div class='alert alert-success alert-dismissible fade show col-md-s6 text-center' role='alert'> Cadastrado com sucesso
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div> ";
-        header("Location: cadOrigemLead.php");
+        header("Location: cadMensagem.php");
     }
 }
 ?>

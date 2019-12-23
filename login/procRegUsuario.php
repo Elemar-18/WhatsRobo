@@ -7,7 +7,7 @@
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
         $numtelefone = filter_input(INPUT_POST, 'numtelefone', FILTER_SANITIZE_STRING);
 
-        $result_usuario = "insert into cadusuario(nomecompleto, email, senha, numtelefone, created) values ('$nomecompleto', '$email', MD5('$senha'), '$numtelefone', NOW())";
+        $result_usuario = "insert into usuario(nomecompleto, email, senha, numtelefone, created) values ('$nomecompleto', '$email', MD5('$senha'), '$numtelefone', NOW())";
         $usuario = mysqli_query($conn, $result_usuario);
         if(mysqli_insert_id($conn)){
             $_SESSION['msg'] = "<div class='alert alert-success alert-dismissible fade show col-md-s6 text-center' role='alert'> Cadastrado com sucesso

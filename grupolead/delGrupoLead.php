@@ -22,7 +22,7 @@
                     Tem certeza que deseja excluir essa origem?
                 </div>
                 <div class="modal-footer">  
-                    <form action="procDelOrigemLead.php" method="post">
+                    <form action="procDelGrupoLead.php" method="post">
                         <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
                         <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
                         <button type="submit" class="btn btn-danger" name="btnDeletar">Deletar</button>

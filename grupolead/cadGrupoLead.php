@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,21 +10,28 @@
 </head>
 
 <body>
-    <?php require "../dashboard/dashboard.php"; ?>
+    <?php require "../dashboard/dashboard.php";
+    if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+    } ?>
 
     <div class="container col-md-6">
         <div class="row">
             <div class="col">
                 <h2 class="font-weight-bold text-center my-5">Cadastro do Grupo de Lead</h1>
-                    <!-- Material input -->
-                        <label for="form1">Grupo do Lead</label>
-                        <input type="text" id="form1" class="form-control my-2">
-                        
-                        <label for="form7">Descrição do Grupo</label>
-                        <textarea id="form7" class="md-textarea form-control my-2 mb-3" rows="3"></textarea>
-                        
+                    <form action="procCadGrupoLead.php" method="post">
 
-                    <button class="btn btn-primary btn-block">Salvar</button>
+                        <input type="hidden" name="id">
+                        
+                        <label for="form1">Grupo do Lead</label>
+                        <input type="text" id="form1" class="form-control my-2" name="grupolead">
+
+                        <label for="form7">Descrição do Grupo</label>
+                        <textarea id="form7" class="md-textarea form-control my-2 mb-3" rows="3" name="descricao"></textarea>
+
+                        <button class="btn btn-primary btn-block" name="btnCadastrar">Cadastrar</button>
+                    </form>
             </div>
         </div>
     </div>

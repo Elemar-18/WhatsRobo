@@ -36,7 +36,7 @@
                         <input type="text" id="form1" class="form-control my-2 mb-4" name="origemlead" value="<?php echo $dados['origemlead']; ?>">
 
                         <button class="btn btn-primary btn-block my-1" name="btnAtualizar">Atualizar</button>
-                        <a class="btn btn-light-green btn-block my-2" name="btnListarOrigemLead" href="visOrigemLead.php">Listar Origem dos Leads</a>
+                        <a class="btn btn-light-green btn-block my-2" href="visOrigemLead.php">Listar Origem dos Leads</a>
                     </form>
             </div>
         </div>

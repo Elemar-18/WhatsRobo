@@ -6,7 +6,7 @@
         $senha = mysqli_real_escape_string($conn, $_POST['senha']);
         $senha = md5($senha);
 
-        $sql = "select * from cadusuario where email = '$usuario' && senha = '$senha' LIMIT 1";
+        $sql = "select * from usuario where email = '$usuario' && senha = '$senha' LIMIT 1";
         $result_login = mysqli_query($conn, $sql);
         $login = mysqli_fetch_assoc($result_login);
 

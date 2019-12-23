@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,34 +10,44 @@
 </head>
 
 <body>
-    <?php require "../dashboard/dashboard.php"; ?>
+    <?php require "../dashboard/dashboard.php";
+          include_once "../conexao/db_conexao.php";
+    if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+    }
+    ?>
 
     <div class="container col-md-6">
         <div class="row">
             <div class="col">
                 <h2 class="font-weight-bold text-center my-5">Cadastro de Mensagens</h1>
+                    <form action="procCadMensagem.php" method="post" enctype="multipart/form-data">
                     <!-- Material input -->
+                    <input type="hidden" name="id">
+
                     <label for="form1">Modelo da Mensagem</label>
-                    <input type="text" id="form1" class="form-control my-2">
+                    <input type="text" id="form1" class="form-control my-2" name="modelo">
 
                     <label for="form7">Descrição da Mensagem</label>
-                    <textarea id="form7" class="md-textarea form-control my-2" rows="3"></textarea>
+                    <textarea id="form7" class="md-textarea form-control my-2" rows="3" name="descricao"></textarea>
 
                     <div class="input-group my-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-primary white-text" id="inputGroupFileAddon01">Envio</span>
                         </div>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="upload">
                             <label class="custom-file-label" for="inputGroupFile01">Escolher arquivo</label>
                         </div>
                     </div>
 
                     <label for="form1">Nome da Sequência</label>
-                    <input type="text" id="form1" class="form-control mb-4 my-2">
+                    <input type="text" id="form1" class="form-control mb-4 my-2" name="sequencia">
 
-
-                    <button class="btn btn-primary btn-block">Salvar</button>
+                    <button class="btn btn-primary btn-block" name="btnCadastrar">Cadastrar</button>
+                    <a class="btn btn-light-green btn-block my-2" href="visMensagem.php">Listar Mensagens</a>
+                    </form>
             </div>
         </div>
     </div>

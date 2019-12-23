@@ -48,7 +48,6 @@
                                 <td><a class="btn btn-primary btn-sm" href="edtOrigemLead.php?id=<?php echo $dados['id']; ?>"><i class="fas fa-edit"></i>Editar</a></td>
                                 <th scope="row"></th>
                                 <td><a class="btn btn-danger btn-sm" data-toggle="modal" href="#basicExampleModal<?php echo $dados['id']; ?>"><i class="fas fa-trash"></i>Deletar</a></td>
-                                <!-- Modal para Deletar -->
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
