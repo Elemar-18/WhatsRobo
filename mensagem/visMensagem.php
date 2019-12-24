@@ -11,6 +11,11 @@
 <body>
     <?php require "../dashboard/dashboard.php";
           include_once "../conexao/db_conexao.php";
+          if (isset($_SESSION['msg'])) {
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+    
     ?>
 
     <h2 class="font-weight-bold text-center my-5">Visualizar Mensagens</h1>
@@ -39,6 +44,7 @@
                         while ($dados = mysqli_fetch_array($resultado_mensagem)) :
                             ?>
                         <tr>
+                            <?php include_once 'delMensagem.php'; ?>
 
                             <td scope="row"><?php echo $dados['id']?></td>
                             <th scope="row"></th>
