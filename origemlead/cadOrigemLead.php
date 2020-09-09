@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,6 +14,9 @@
                 echo $_SESSION['msg'];
                 unset($_SESSION['msg']);
             }
+            if(! $_SESSION){
+                session_start(); 
+            }
     ?>
     <div class="container col-md-6">
         <div class="row">
@@ -26,7 +27,7 @@
                         <input type="hidden" name="id">
 
                         <label for="form1">Origem do Lead</label>
-                        <input type="text" id="form1" class="form-control my-2 mb-4" name="origemlead">
+                        <input type="text" id="form1" class="form-control my-2 mb-4" name="origemlead" required>
 
                         <button class="btn btn-primary btn-block my-1" name="btnCadastrar">Cadastrar</button>
                         <a class="btn btn-light-green btn-block my-2" href="visOrigemLead.php">Listar Origem dos Leads</a>

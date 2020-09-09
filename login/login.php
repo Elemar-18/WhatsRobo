@@ -12,9 +12,10 @@
 </head>
 
 <body>
+<?php require 'esqueciSenha.php'; ?>
     <div class="container col-md-4 py-5">
-        <!-- Default form login -->
-        <form class="text-center border border-light p-5" action="valida.php" method="POST">
+        <!-- Início -->
+        <form class="text-center border border-light p-5" action="procCadUsuario.php" method="POST">
 
             <h1>Whats<b style="color: aquamarine;">Robô</b></h1>
 
@@ -23,20 +24,20 @@
             <!-- Email -->
             <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Email" name="email">
 
-            <!-- Password -->
+            <!-- Senha -->
             <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Senha" name="senha">
 
             <div class="d-flex justify-content-around">
                 <div>
-                    <!-- Remember me -->
+                    <!-- Lembrar me -->
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
                         <label class="custom-control-label" for="defaultLoginFormRemember">Lembrar Me</label>
                     </div>
                 </div>
                 <div>
-                    <!-- Forgot password -->
-                    <a href="" class="blue-text">Esqueceu a Senha?</a>
+                    <!-- Esqueci a senha -->
+                    <a data-toggle="modal" data-target="#modalSubscriptionForm" class="blue-text">Esqueceu a Senha?</a>
                 </div>
             </div>
 
@@ -57,9 +58,10 @@
             <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
 
         </form>
-        <!-- Default form login -->
+        <!-- Início Formulário -->
     </div>
 </body>
+
 <?php require "../links/links_js.php"; ?>
 
 </html>

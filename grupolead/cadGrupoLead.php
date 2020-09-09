@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -14,7 +13,11 @@
     if (isset($_SESSION['msg'])) {
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
-    } ?>
+    } 
+    if(! $_SESSION){
+        session_start(); 
+    }
+    ?>
 
     <div class="container col-md-6">
         <div class="row">
@@ -25,10 +28,10 @@
                         <input type="hidden" name="id">
                         
                         <label for="form1">Grupo do Lead</label>
-                        <input type="text" id="form1" class="form-control my-2" name="grupolead">
+                        <input type="text" id="form1" class="form-control my-2" name="grupolead" required'>
 
                         <label for="form7">Descrição do Grupo</label>
-                        <textarea id="form7" class="md-textarea form-control my-2 mb-3" rows="3" name="descricao"></textarea>
+                        <textarea id="form7" class="md-textarea form-control my-2 mb-3" rows="3" name="descricao" required></textarea>
 
                         <button class="btn btn-primary btn-block" name="btnCadastrar">Cadastrar</button>
                     </form>

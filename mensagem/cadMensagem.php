@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,6 +15,9 @@
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
     }
+    if(! $_SESSION){
+        session_start(); 
+    }
     ?>
 
     <div class="container col-md-6">
@@ -27,10 +29,10 @@
                     <input type="hidden" name="id">
 
                     <label for="form1">Modelo da Mensagem</label>
-                    <input type="text" id="form1" class="form-control my-2" name="modelo">
+                    <input type="text" id="form1" class="form-control my-2" name="modelo" required>
 
                     <label for="form7">Descrição da Mensagem</label>
-                    <textarea id="form7" class="md-textarea form-control my-2" rows="3" name="descricao"></textarea>
+                    <textarea id="form7" class="md-textarea form-control my-2" rows="3" name="descricao" required></textarea>
 
                     <div class="input-group my-3">
                         <div class="input-group-prepend">
@@ -43,7 +45,7 @@
                     </div>
 
                     <label for="form1">Nome da Sequência</label>
-                    <input type="text" id="form1" class="form-control mb-4 my-2" name="sequencia">
+                    <input type="text" id="form1" class="form-control mb-4 my-2" name="sequencia" required>
 
                     <button class="btn btn-primary btn-block" name="btnCadastrar">Cadastrar</button>
                     <a class="btn btn-light-green btn-block my-2" href="visMensagem.php">Listar Mensagens</a>

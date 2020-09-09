@@ -29,7 +29,7 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Whats<b class="logo">Robô</b>
+                    <a class="nav-link" href="../index.php">Whats<b class="logo">Robô</b>
                     </a>
                 </li>
 
@@ -43,10 +43,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-address-book"></i>Leads</a>
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../leads/cadLead.php"><i class="fas fa-plus-circle"></i>Cadastrar Leads</a>
-                        <a class="dropdown-item" href="../leads/visLead.php"><i class="fas fa-eye"></i>Visualizar Leads</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Editar Leads</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-trash"></i>Remover Leads</a>
+                        <a class="dropdown-item" href="../lead/cadLead.php"><i class="fas fa-plus-circle"></i>Cadastrar Leads</a>
+                        <a class="dropdown-item" href="../lead/visLead.php"><i class="fas fa-eye"></i>Visualizar Leads</a>
                     </div>
                 </li>
 
@@ -56,8 +54,6 @@
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="../origemlead/cadOrigemLead.php"><i class="fas fa-plus-circle"></i>Cadastrar Origem dos Leads</a>
                         <a class="dropdown-item" href="../origemlead/visOrigemLead.php"><i class="fas fa-eye"></i>Visualizar Origem dos Leads</a>
-                        <a class="dropdown-item" href="../origemlead/edtOrigemLead.php"><i class="fas fa-edit"></i>Editar Origem dos Leads</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-trash"></i>Remover Origem dos Leads</a>
                     </div>
                 </li>
 
@@ -67,8 +63,6 @@
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="../grupolead/cadGrupoLead.php"><i class="fas fa-plus-circle"></i>Cadastrar Grupo dos Leads</a>
                         <a class="dropdown-item" href="../grupolead/visGrupoLead.php"><i class="fas fa-eye"></i>Visualizar Grupo dos Leads</a>
-                        <a class="dropdown-item" href="../grupolead/edtGrupoLead.php"><i class="fas fa-edit"></i>Editar Grupo dos Leads</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-trash"></i>Remover Grupo dos Leads</a>
                     </div>
                 </li>
 
@@ -78,13 +72,11 @@
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="../mensagem/cadMensagem.php"><i class="fas fa-plus-circle"></i>Cadastrar Mensagens</a>
                         <a class="dropdown-item" href="../mensagem/visMensagem.php"><i class="fas fa-eye"></i>Visualizar Mensagens</a>
-                        <a class="dropdown-item" href="../mensagem/edtMensagem.php"><i class="fas fa-edit"></i>Editar Mensagens</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-trash"></i>Remover Mensagens</a>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-bullseye"></i>Realizar Disparo
+                    <a class="nav-link" href="../disparador/cadDisparador.php"><i class="fa fa-bullseye"></i>Realizar Disparo
                     </a>
                 </li>
 

@@ -1,6 +1,6 @@
 <?php 
 $user = "root"; 
-$password = "password"; 
+$password = ""; 
 $database = "whatsrobo";  
 $hostname = "localhost"; 
  

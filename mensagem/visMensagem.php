@@ -44,7 +44,7 @@
                         while ($dados = mysqli_fetch_array($resultado_mensagem)) :
                             ?>
                         <tr>
-                            <?php include_once 'delMensagem.php'; ?>
+                            <?php require 'delMensagem.php'; ?>
 
                             <td scope="row"><?php echo $dados['id']?></td>
                             <th scope="row"></th>
@@ -58,29 +58,16 @@
                             <th scope="row"></th>
                             <td><a class="btn btn-primary btn-sm" href="edtMensagem.php?id=<?php echo $dados['id']; ?>"><i class="fas fa-edit"></i>Editar</a></td>
                             <th scope="row"></th>
-                            <td><a class="btn btn-primary btn-sm" data-toggle="modal" href="#basicExampleModal<?php echo $dados['id']; ?>"><i class="fas fa-trash"></i>Deletar</a></td>
+                            <td><a class="btn btn-danger btn-sm" data-toggle="modal" href="#basicExampleModal<?php echo $dados['id']; ?>"><i class="fas fa-trash"></i>Deletar</a></td>
                         </tr>
                         <?php endwhile; ?>
                     </tbody>
                 </table>
             </div>
-            <nav aria-label="Page navigation example">
-                <ul class="pagination pg-blue justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link" tabindex="-1">Anterior</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link">1</a></li>
-                    <li class="page-item">
-                        <a class="page-link">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link">3</a></li>
-                    <li class="page-item ">
-                        <a class="page-link">Próximo</a>
-                    </li>
-                </ul>
-            </nav>
-            <br>
-            <a class="btn btn-primary btn-block col-md-3" href="cadMensagem.php">Cadastrar Mensagem</a>
+            <?php include_once '../_part/pagination.php'; ?>
+            <div class="mx-auto" style="padding-left: 500px;">
+                <a class="btn btn-primary btn-block col-md-4" href="cadMensagem.php">Cadastrar Mensagem</a>
+            </div>
         </div>
 </body>
 

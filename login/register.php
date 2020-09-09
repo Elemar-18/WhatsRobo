@@ -55,13 +55,15 @@
         <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
         <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
 
-        <hr>
-
         <!-- Terms of service -->
         <p>Você clicando em 
             <em>Logar</em> você concorda com os nossos 
-            <a href="" target="_blank">Termos de Serviço</a>
+            <a href="termosServico.php" target="_blank">Termos de Serviço</a>
 
+        <hr>
+
+        <p>Ou se você já tem o cadastro</p>
+        <a class="btn btn-success my-4 btn-block" type="button" href="login.php">Fazer Login</a>
     </form>
     <!-- Default form register -->
     </div>
