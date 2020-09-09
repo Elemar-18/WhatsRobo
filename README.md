@@ -1,4 +1,4 @@
-# WhatsRobo 1.0 - Sistema de Automação para WhatsApp feito em PHP
+## WhatsRobo 1.0 - Sistema de Automação para WhatsApp feito em PHP
 
 1. Módulo de login com email e senha e cadastro de usuário;
 2. Módulo de login com autenticação nas redes sociais - Em andamento;
