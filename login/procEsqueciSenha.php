@@ -3,10 +3,10 @@
     include_once '../conexao/db_conexao.php';
     require_once 'PHPMailer/src/PHPMailer.php';
     require_once 'PHPMailer/src/SMTP.php';
-    require_once 'PHPMailer/src/Exception.php';
+    //require_once 'PHPMailer/src/Exception.php';
 
     use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
+    //use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
     if(isset($_POST['email']) ){
@@ -41,9 +41,9 @@
         $mail->isSMTP();                                            // Send using SMTP
         $mail->Host       = 'smtp.mailtrap.io';                            // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = '0151b71d5037c3';                     // SMTP username
-        $mail->Password   = '6edb7ecb7112fb';                               // SMTP password
-        $mail->Port       = 587;
+        $mail->Username   = '6974bf32e7bff8';                     // SMTP username
+        $mail->Password   = '4adf50ae5981e3';                               // SMTP password
+        $mail->Port       = 2525;
 
         // Recipientes
         $mail->setFrom($email, '');
